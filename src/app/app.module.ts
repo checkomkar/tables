@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { AngDatatablesComponent } from './ang-datatables/ang-datatables.component';
 import { AboutComponent } from './about/about.component';
 import { SalesComponent } from './sales/sales.component';
+import { NewShipRequestComponent } from './new-ship-request/new-ship-request.component';
 
 let salesState = { name: 'sales', url: '/sales',  component: SalesComponent }; 
 let aboutState = { name: 'about', url: '/about',  component: AboutComponent };
@@ -21,7 +22,8 @@ let aboutState = { name: 'about', url: '/about',  component: AboutComponent };
     HeaderComponent,
     AngDatatablesComponent,
     AboutComponent,
-    SalesComponent
+    SalesComponent,
+    NewShipRequestComponent
   ],
   imports: [
     BrowserModule,

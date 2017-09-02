@@ -1,31 +1,67 @@
 <div class="col-lg-12">
     <h2>Shipping Request</h2>
     <hr>
-    <button class="btn btn-primary">New Shipping Request</button>
+    <button class="btn btn-primary" (click)="openModal(newShipReq)">New Shipping Request</button>
     <hr>
     <table  class="table table-striped">
         <thead>
             <tr>
                 <th>Ship Number</th>
                 <th>
+                    Contract No.
+                </th>
+                <th>
+                    Customer
+                </th>
+                <th>
+                    Protocol
+                </th>                
+                <th>
                     Site Number
                 </th>
                 <th>
-                    Add Order
+                    Request Date
+                </th>
+                <th>
+                    Requested Arrival Date
+                </th>
+                <th>
+                    Status
+                </th>
+                <th>
+                    
                 </th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor= "let item of items">
                 <td>
-                    {{item.status}}
+                    {{item.ship_no}}
+                </td>
+                <td>
+                    {{item.contract_no}}
+                </td>
+                <td>
+                    {{item.customer}}
+                </td>
+                <td>
+                    PROT_1
                 </td>
                 <td>
                     {{item.site_no}}
                 </td>
                 <td>
-                    <button class="btn btn-default" (click)="openModal(template)">
-                        Add
+                    {{item.request_date}}
+                </td>
+                <td>
+                    {{item.requested_arrival_date}}
+                </td>
+                <td>
+                    {{item.status}}
+                </td>                
+                <td>
+                    <button class="btn btn-default" (click)="openModal(newShipReq)">
+                        Create New Form
                     </button>
                 </td>
             </tr>
@@ -35,13 +71,17 @@
 </div>
 
 <ng-template #template>
-  <div class="modal-header">
-    <h4 class="modal-title pull-left">Modal</h4>
-    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    This is a modal.
-  </div>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Modal</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        This is a modal.
+    </div>
+</ng-template>
+
+<ng-template #newShipReq>
+    <app-new-ship-request [modalRefChild]='modalRef'></app-new-ship-request>    
 </ng-template>
