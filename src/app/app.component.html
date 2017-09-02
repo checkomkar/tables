@@ -1,35 +1,13 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="app-component">
     <app-header></app-header>
-    <div class="container">
+    <div class="container main-section">
         <div class="col-lg-12">
             <h1>
                 Welcome to {{title}}!
             </h1>
+            <hr>
         </div>
-        <div class="table-responsive">
-            <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Ship Number</th>
-                        <th>
-                            Site Number
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor= "let item of items; let i = index">
-                        <td>
-                            {{item.status}}
-                        </td>
-                        <td>
-                            {{item.site_no}}
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <ui-view></ui-view>        
     </div>
-
-
 </div>
