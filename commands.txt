@@ -1,0 +1,5 @@
+ alias ng='C:/Users/Omkar/AppData/Roaming/npm/node_modules/@angular/cli/bin/ng'
+
+ angular-cli-ghpages --repo=https://205d4df038e4e2669ced70d4a41d2a65dd0bb9db@github.com/checkomkar/tables.git --name="checkomkar" --email=check.omkar@gmail.com
+
+ angular-cli-ghpages --repo=https://205d4df038e4e2669ced70d4a41d2a65dd0bb9db@github.com/checkomkar/tables.git --name="checkomkar" --email=check.omkar@gmail.com

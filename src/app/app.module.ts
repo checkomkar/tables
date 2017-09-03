@@ -12,8 +12,9 @@ import { AngDatatablesComponent } from './ang-datatables/ang-datatables.componen
 import { AboutComponent } from './about/about.component';
 import { SalesComponent } from './sales/sales.component';
 import { NewShipRequestComponent } from './new-ship-request/new-ship-request.component';
+import { SearchFilterPipe } from './services/app.service.searchFilterPipe';
 
-let salesState = { name: 'sales', url: '/sales',  component: SalesComponent }; 
+let salesState = { name: 'home', url: '',  component: SalesComponent }; 
 let aboutState = { name: 'about', url: '/about',  component: AboutComponent };
 
 @NgModule({
@@ -23,7 +24,8 @@ let aboutState = { name: 'about', url: '/about',  component: AboutComponent };
     AngDatatablesComponent,
     AboutComponent,
     SalesComponent,
-    NewShipRequestComponent
+    NewShipRequestComponent,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,

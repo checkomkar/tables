@@ -17,7 +17,7 @@ export class SalesComponent implements OnInit {
     items: any;
     dtOptions: DataTables.Settings = {};
     //dtTrigger: Subject<any> = new Subject();
-    private dataUrl = '../assets/sample-data.json';  // URL to web api
+    private dataUrl = './assets/sample-data.json';  // URL to web api
     testResponse: any;
   	public modalRef: BsModalRef;
   	

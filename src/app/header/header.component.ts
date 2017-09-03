@@ -9,6 +9,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 export class HeaderComponent implements OnInit {
 	set = 'header1';
 	user_name = 'Omkar';
+	show: boolean;
 	constructor() { }
 
 	ngOnInit() {

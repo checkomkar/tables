@@ -10,6 +10,10 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  "assets": [
+    "tables/assets",
+    "sample-data.json"
+  ],
   "private": true,
   "dependencies": {
     "@angular/animations": "^4.2.4",
@@ -32,6 +36,7 @@
     "jquery": "^3.2.1",
     "ngx-bootstrap": "^1.9.1",
     "rxjs": "^5.4.2",
+    "typings": "^2.1.1",
     "ui-router-ng2": "^1.0.0-beta.5",
     "zone.js": "^0.8.14"
   },
