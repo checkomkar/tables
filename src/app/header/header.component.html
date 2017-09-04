@@ -23,16 +23,17 @@
                     <li>
                         <a href="#contact">Contact</a>
                     </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" (click)='show=!show' >More
+                    <li class="dropdown" app-menu-more dropdown>
+                        <!-- <a class="dropdown-toggle" (click)='show=!show' >More
                             <span class="caret"></span>
                         </a>
                         <ul [hidden]='!show' class="dropdown-menu custom-menu">
                             <li><a uiSref="shipment-request">New Shipment Request</a></li>
                             <li><a href="#">Page 1-2</a></li>
                             <li><a href="#">Page 1-3</a></li>
-                        </ul>
+                        </ul> -->
                     </li>
+                    <!-- <app-menu-more></app-menu-more> -->
                 </ul>
                 <div class="navbar-header navbar-right">
                     <p class="navbar-text">

@@ -2,4 +2,9 @@
 
  angular-cli-ghpages --repo=https://205d4df038e4e2669ced70d4a41d2a65dd0bb9db@github.com/checkomkar/tables.git --name="checkomkar" --email=check.omkar@gmail.com
 
- angular-cli-ghpages --repo=https://205d4df038e4e2669ced70d4a41d2a65dd0bb9db@github.com/checkomkar/tables.git --name="checkomkar" --email=check.omkar@gmail.com
+ angular-cli-ghpages --repo=https://6e806e733b90201e564d59be4475786aa3bb9093@github.com/checkomkar/tables.git --name="checkomkar" --email=check.omkar@gmail.com
+
+ng build --prod --base-href "https://checkomkar.github.io/tables/"
+
+C:/Users/Omkar/AppData/Roaming/npm/node_modules/ionic/bin/ionic
+
