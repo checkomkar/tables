@@ -13,9 +13,11 @@ import { AboutComponent } from './about/about.component';
 import { SalesComponent } from './sales/sales.component';
 import { NewShipRequestComponent } from './new-ship-request/new-ship-request.component';
 import { SearchFilterPipe } from './services/app.service.searchFilterPipe';
+import { ShipmentRequestComponent } from './shipment-request/shipment-request.component';
 
-let salesState = { name: 'home', url: '',  component: SalesComponent }; 
+let salesState = { name: 'home', url: '/',  component: SalesComponent }; 
 let aboutState = { name: 'about', url: '/about',  component: AboutComponent };
+let shipmentRequestState = { name: 'shipment-request', url: '/shipment-request',  component: ShipmentRequestComponent };
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ let aboutState = { name: 'about', url: '/about',  component: AboutComponent };
     AboutComponent,
     SalesComponent,
     NewShipRequestComponent,
-    SearchFilterPipe
+    SearchFilterPipe,
+    ShipmentRequestComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,7 @@ let aboutState = { name: 'about', url: '/about',  component: AboutComponent };
     NgbModule.forRoot(),
     ModalModule.forRoot(),
     BsDropdownModule.forRoot(),
-    UIRouterModule.forRoot({ states: [ salesState, aboutState ], useHash: true })
+    UIRouterModule.forRoot({ states: [ salesState, aboutState, shipmentRequestState ], useHash: false })
   ],
   providers: [],
   bootstrap: [AppComponent]
