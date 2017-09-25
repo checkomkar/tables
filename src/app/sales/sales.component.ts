@@ -4,7 +4,7 @@ import {HttpService} from '../services/app.service.httpService';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/modal-options.class';
-
+import { Subject } from 'rxjs/Rx';
 
 @Component({
   selector: 'app-sales',
@@ -17,6 +17,7 @@ export class SalesComponent implements OnInit {
     items: any;
     dtOptions: DataTables.Settings = {};
     //dtTrigger: Subject<any> = new Subject();
+    dtTrigger: Subject<any> = new Subject();
     private dataUrl = './assets/sample-data.json';  // URL to web api
     testResponse: any;
   	public modalRef: BsModalRef;

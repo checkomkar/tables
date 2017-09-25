@@ -8,3 +8,8 @@ ng build --prod --base-href "https://checkomkar.github.io/tables/"
 
 C:/Users/Omkar/AppData/Roaming/npm/node_modules/ionic/bin/ionic
 
+Username: Omkar.Kamale
+Password: Atlantic1
+Email address: Omkar.Kamale@catalent.com 
+
+

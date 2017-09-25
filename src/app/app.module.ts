@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { DataTablesModule } from 'angular-datatables';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { ModalModule } from 'ngx-bootstrap';
+import { ModalModule, TabsModule } from 'ngx-bootstrap';
 //import { BsDropdownModule } from 'ngx-bootstrap';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { AppComponent } from './app.component';
@@ -16,9 +16,12 @@ import { SalesComponent } from './sales/sales.component';
 import { NewShipRequestComponent } from './new-ship-request/new-ship-request.component';
 import { SearchFilterPipe } from './services/app.service.searchFilterPipe';
 import { ShipmentRequestComponent } from './shipment-request/shipment-request.component';
+import { HeadersComponent } from './headers/headers.component';
+import { TabsProtocolMasterComponent } from './tabs-protocol-master/tabs-protocol-master.component';
 
 
-let salesState = { name: 'home', url: '/',  component: SalesComponent }; 
+let headersState = { name: 'home', url: '/',  component: HeadersComponent }; 
+let salesState = { name: 'sales', url: '/new-shipment-request',  component: SalesComponent }; 
 let aboutState = { name: 'about', url: '/about',  component: AboutComponent };
 let shipmentRequestState = { name: 'shipment-request', url: '/shipment-request',  component: ShipmentRequestComponent };
 
@@ -32,7 +35,9 @@ let shipmentRequestState = { name: 'shipment-request', url: '/shipment-request',
     NewShipRequestComponent,
     SearchFilterPipe,
     ShipmentRequestComponent,
-    MenuMoreComponent
+    MenuMoreComponent,
+    HeadersComponent,
+    TabsProtocolMasterComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +46,8 @@ let shipmentRequestState = { name: 'shipment-request', url: '/shipment-request',
     NgbModule.forRoot(),
     ModalModule.forRoot(),
     BsDropdownModule.forRoot(),
-    UIRouterModule.forRoot({ states: [ salesState, aboutState, shipmentRequestState ], useHash: false })
+    TabsModule.forRoot(),
+    UIRouterModule.forRoot({ states: [ headersState, salesState, aboutState, shipmentRequestState ], useHash: false })
   ],
   providers: [],
   bootstrap: [AppComponent]
