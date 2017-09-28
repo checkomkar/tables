@@ -34,6 +34,7 @@ testem.log
 /typings
 yarn-error.log
 commands.txt
+node_modules.zip
 
 # e2e
 /e2e/*.js
