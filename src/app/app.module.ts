@@ -19,9 +19,10 @@ import { ShipmentRequestComponent } from './shipment-request/shipment-request.co
 import { HeadersComponent } from './headers/headers.component';
 import { TabsProtocolMasterComponent } from './tabs-protocol-master/tabs-protocol-master.component';
 import { LoginComponent } from './login/login.component';
+import { ShipRequestHeaderComponent } from './ship-request-header/ship-request-header.component';
 
 let loginState = { name: 'home', url: '/',  component: LoginComponent }; 
-let headersState = { name: 'headers', url: '/',  component: HeadersComponent }; 
+let headersState = { name: 'headers', url: '/',  component: ShipRequestHeaderComponent }; 
 let salesState = { name: 'sales', url: '/new-shipment-request',  component: SalesComponent }; 
 let aboutState = { name: 'about', url: '/about',  component: AboutComponent };
 let shipmentRequestState = { name: 'shipment-request', url: '/shipment-request',  component: ShipmentRequestComponent };
@@ -39,7 +40,8 @@ let shipmentRequestState = { name: 'shipment-request', url: '/shipment-request',
     MenuMoreComponent,
     HeadersComponent,
     TabsProtocolMasterComponent,
-    LoginComponent
+    LoginComponent,
+    ShipRequestHeaderComponent
   ],
   imports: [
     BrowserModule,
