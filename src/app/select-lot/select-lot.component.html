@@ -1,0 +1,141 @@
+<div class="container">
+    <h2>
+        7.5.4.SP-4: Shipment Portal Select Lot Screen
+    </h2>
+    <hr>
+    <div class="row">
+        <div class="col-md-12">
+            <button class="btn btn-catalent" (click)="openModal(newShipReq)">Select</button>
+            <button uiSref="find-site" class="btn btn-catalent">Find Site</button>
+            <button uiSref="shipment-request" class="btn btn-catalent">Back</button>
+        </div>
+        <div class="col-md-12 material-table">
+            <table  class="table table-striped table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Material Description1</th>
+                        <th>
+                            Material Description2
+                        </th>
+                        <th>
+                            Item Number
+                        </th>
+                        <th>
+                            Customer Lot
+                        </th>                
+                        <th>
+                            Supplier Lot
+                        </th>
+                        <th>
+                            Lot Number
+                        </th>
+                        <th>
+                            Memo Lot2
+                        </th>
+                        <th>
+                            Memo Lot3
+                        </th>
+                        <th>
+                            Expiry date
+                        </th>
+                        <th>
+                            Quality Status
+                        </th>
+                        <th>
+                            Quantity
+                        </th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            <input class="form-control" type="text" name="">
+                        </td>
+                        <td>
+                            <input class="form-control" type="text" name="">
+                        </td>
+                        <td>
+                            <input class="form-control" type="text" name="">
+                        </td>
+                        <td>
+                            <input class="form-control" type="text" name="">
+                        </td>
+                        <td>
+                            <input class="form-control" type="text" name="">
+                        </td>
+                        <td>
+                            <input class="form-control" type="text" name="">
+                        </td>
+                        <td>
+                            <input class="form-control" type="text" name="">
+                        </td>
+                        <td>
+                            <input class="form-control" type="text" name="">
+                        </td>
+                        <td>
+                            <input class="form-control" type="text" name="">
+                        </td>                
+                        <td>
+                            <input class="form-control" type="text" name="">
+                        </td>
+                        <td>
+                            <input class="form-control" type="text" name="">
+                        </td>
+                    </tr>
+                    <tr *ngFor= "let s of shipments;  let i=index">
+                        <ng-template [ngIf]="i<20">
+                            <td>
+                                <input type="radio" name="sel_item">
+                            </td>
+                            <td>
+                                {{s.Material_Description_1}}
+                            </td>
+                            <td>
+                                {{s.Material_Description_2}}
+                            </td>
+                            <td>
+                                {{s.item_number}}
+                            </td>
+                            <td>
+                                {{s.customer_lot}}
+                            </td>
+                            <td>
+                                {{s.supplier_lot}}
+                            </td>
+                            <td>
+                                {{s.lot_number}}
+                            </td>
+                            <td>
+                                {{s.memo_lot_2}}
+                            </td>
+                            <td>
+                                {{s.memo_lot_3}}
+                            </td>
+                            <td>
+                                {{s.expiry_date}}
+                            </td>                
+                            <td>
+                                {{s.quality_status}}
+                            </td>
+                            <td>
+                                {{s.quantity}}
+                            </td>
+                            
+                        </ng-template>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-12 text-center back-btn-holder">
+            <button uiSref="shipment-request" class="btn btn-catalent">Back</button>
+        </div>
+    </div>
+    
+    
+</div>

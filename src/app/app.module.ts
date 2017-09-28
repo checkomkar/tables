@@ -20,12 +20,33 @@ import { HeadersComponent } from './headers/headers.component';
 import { TabsProtocolMasterComponent } from './tabs-protocol-master/tabs-protocol-master.component';
 import { LoginComponent } from './login/login.component';
 import { ShipRequestHeaderComponent } from './ship-request-header/ship-request-header.component';
+import { SelectLotComponent } from './select-lot/select-lot.component';
+import { PortalFindSiteComponent } from './portal-find-site/portal-find-site.component';
+import { UpdateSiteComponent } from './update-site/update-site.component';
+import { NewSiteComponent } from './new-site/new-site.component';
 
 let loginState = { name: 'home', url: '/',  component: LoginComponent }; 
 let headersState = { name: 'headers', url: '/',  component: ShipRequestHeaderComponent }; 
 let salesState = { name: 'sales', url: '/new-shipment-request',  component: SalesComponent }; 
 let aboutState = { name: 'about', url: '/about',  component: AboutComponent };
 let shipmentRequestState = { name: 'shipment-request', url: '/shipment-request',  component: ShipmentRequestComponent };
+let selectLotState = { name: 'select-lot', url: '/select-lot',  component: SelectLotComponent };
+let findSiteState = { name: 'find-site', url: '/find-site',  component: PortalFindSiteComponent };
+let updateSiteState = { name: 'update-site', url: '/update-site',  component: UpdateSiteComponent };
+let newSiteState = { name: 'new-site', url: '/new-site',  component: NewSiteComponent };
+const routes = { 
+  states: [ 
+    findSiteState, 
+    updateSiteState, 
+    newSiteState, 
+    loginState, 
+    headersState, 
+    salesState, 
+    aboutState, 
+    shipmentRequestState, 
+    selectLotState ], 
+  useHash: false 
+};
 
 @NgModule({
   declarations: [
@@ -41,7 +62,11 @@ let shipmentRequestState = { name: 'shipment-request', url: '/shipment-request',
     HeadersComponent,
     TabsProtocolMasterComponent,
     LoginComponent,
-    ShipRequestHeaderComponent
+    ShipRequestHeaderComponent,
+    SelectLotComponent,
+    PortalFindSiteComponent,
+    UpdateSiteComponent,
+    NewSiteComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +76,7 @@ let shipmentRequestState = { name: 'shipment-request', url: '/shipment-request',
     ModalModule.forRoot(),
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
-    UIRouterModule.forRoot({ states: [ loginState, headersState, salesState, aboutState, shipmentRequestState ], useHash: false })
+    UIRouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

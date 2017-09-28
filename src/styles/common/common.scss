@@ -31,4 +31,10 @@ body {
 		color: white;
 		text-decoration: underline;
 	}
+	&.btn-catalent-light{
+		background-color: lighten( $catalent-main, 10% )
+	}
+	&.btn-purple-light{
+		background-color: lighten( $catalent-purple, 20% )
+	}
 }

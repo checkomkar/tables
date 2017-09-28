@@ -1,7 +1,10 @@
 <div class="container">
+    <h2>7.5.3.SP-3: Shipment Portal Request Screen </h2>
     <div class="shipment-form">
-        <h3>7.5.3.SP-3: Shipment Portal Request Screen </h3>
-        <hr>
+        <div class="form-header form-header-purple">
+            <h4>Shipment Request</h4>            
+        </div>
+        
         <form class="form-horizontal">
           <div class="form-group">
             <label for="inputCustomer" class="col-sm-2 control-label">Customer</label>
@@ -21,7 +24,7 @@
               <input type="text" class="form-control" id="inputID" placeholder="Shipment ID">
             </div>
             <div class="col-sm-1">
-                <button class="btn btn-primary">Generate</button>
+                <button class="btn btn-catalent btn-purple-light">Generate</button>
             </div>
             <div class="col-sm-5">
                 <label for="inputPassword3" class="col-sm-4 control-label">Request Date</label>
@@ -61,105 +64,116 @@
     </div>
 
     <div class="shipment-form second-form">
-        <h3>Requested Items</h3>
-        <hr>
-        <button class="btn btn-primary">Add Item</button>
-        <div class="scroll-table">
-            <table  class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Material_Description_1</th>
-                        <th>
-                            Material_Description_2
-                        </th>
-                        <th>
-                            item_number
-                        </th>
-                        <th>
-                            customer_lot
-                        </th>                
-                        <th>
-                            supplier_lot
-                        </th>
-                        <th>
-                            lot_number
-                        </th>
-                        <th>
-                            memo_lot_2
-                        </th>
-                        <th>
-                            memo_lot_3
-                        </th>
-                        <th>
-                            expiry_date
-                        </th>
-                        <th>
-                            quality_status
-                        </th>
-                        <th>
-                            quantity
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor= "let s of shipments;  let i=index">
-                        <ng-template [ngIf]="i<5">
-                            <td>
-                                {{s.Material_Description_1}}
-                            </td>
-                            <td>
-                                {{s.Material_Description_2}}
-                            </td>
-                            <td>
-                                {{s.item_number}}
-                            </td>
-                            <td>
-                                {{s.customer_lot}}
-                            </td>
-                            <td>
-                                {{s.supplier_lot}}
-                            </td>
-                            <td>
-                                {{s.lot_number}}
-                            </td>
-                            <td>
-                                {{s.memo_lot_2}}
-                            </td>
-                            <td>
-                                {{s.memo_lot_3}}
-                            </td>
-                            <td>
-                                {{s.expiry_date}}
-                            </td>                
-                            <td>
-                                {{s.quality_status}}
-                            </td>
-                            <td>
-                                {{s.quantity}}
-                            </td>
-                            
-                        </ng-template>
-                        
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><b>Total</b></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="form-header form-header-purple">
+            <h4>Requested Items</h4>            
+        </div>
+        <div class="col-md-12">
+            <button class="btn btn-catalent btn-purple-light">Add Item</button>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="scroll-table">
+                    <table  class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Material_Description_1</th>
+                                <th>
+                                    Material_Description_2
+                                </th>
+                                <th>
+                                    item_number
+                                </th>
+                                <th>
+                                    customer_lot
+                                </th>                
+                                <th>
+                                    supplier_lot
+                                </th>
+                                <th>
+                                    lot_number
+                                </th>
+                                <th>
+                                    memo_lot_2
+                                </th>
+                                <th>
+                                    memo_lot_3
+                                </th>
+                                <th>
+                                    expiry_date
+                                </th>
+                                <th>
+                                    quality_status
+                                </th>
+                                <th>
+                                    quantity
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor= "let s of shipments;  let i=index">
+                                <ng-template [ngIf]="i<5">
+                                    <td>
+                                        {{s.Material_Description_1}}
+                                    </td>
+                                    <td>
+                                        {{s.Material_Description_2}}
+                                    </td>
+                                    <td>
+                                        {{s.item_number}}
+                                    </td>
+                                    <td>
+                                        {{s.customer_lot}}
+                                    </td>
+                                    <td>
+                                        {{s.supplier_lot}}
+                                    </td>
+                                    <td>
+                                        {{s.lot_number}}
+                                    </td>
+                                    <td>
+                                        {{s.memo_lot_2}}
+                                    </td>
+                                    <td>
+                                        {{s.memo_lot_3}}
+                                    </td>
+                                    <td>
+                                        {{s.expiry_date}}
+                                    </td>                
+                                    <td>
+                                        {{s.quality_status}}
+                                    </td>
+                                    <td>
+                                        {{s.quantity}}
+                                    </td>
+                                    
+                                </ng-template>
+                                
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><b>Total</b></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <h4>
+                Requested Med IDs
+            </h4>
+            <hr>
         </div>        
-        <h4>
-            Requested Med IDs
-        </h4>
+        
         <div class="requested-med-table">
             <table  class="table table-striped">
                 <thead>
@@ -208,8 +222,9 @@
     </div>
 
     <div class="shipment-form third-form">
-        <h3>Protocol</h3>
-        <hr>
+        <div class="form-header form-header-purple">
+            <h4>Protocol</h4>            
+        </div>        
         <form class="form-horizontal">
             <div class="form-group">
                 <div class="col-sm-2"></div>
@@ -269,8 +284,8 @@
                     </select>
                 </div>
                 <div class="col-sm-4">
-                    <button class="btn btn-primary">Find</button>
-                    <button class="btn btn-primary">New Address</button>
+                    <button class="btn btn-catalent btn-purple-light">Find</button>
+                    <button class="btn btn-catalent btn-purple-light">New Address</button>
                 </div>
             </div>
             <div class="form-group">
@@ -286,7 +301,7 @@
     </div>
     
     <div class="submit-request text-center">
-        <button class="btn btn-primary">Submit Request</button>
+        <button uiSref="select-lot" class="btn btn-catalent btn-purple-light">Submit Request</button>
     </div>
 
 </div>
